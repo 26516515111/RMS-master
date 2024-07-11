@@ -98,6 +98,6 @@ void LoginDia::on_chPwdEdit_released() //改密码
 
 void LoginDia::on_aboutBtn_released()
 {
-    QMessageBox::about(this,tr("关于系统"),tr("制作者：刘家麒 赵鹿均\n\n系统版本：V1.0\n\nQt版本：Qt 6.4.1"));
+    QMessageBox::about(this,tr("关于系统"),tr("制作者：向荟婷 吴雨轩 杨智羚 张鑫月\n\n系统版本：V1.0\n\nQt版本：Qt 6.7.2"));
 }
 
