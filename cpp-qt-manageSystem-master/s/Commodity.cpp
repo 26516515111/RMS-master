@@ -64,7 +64,7 @@ string Commodity::getClassStr()
 {
     switch(_no[0])
     {
-    case'F': return move("食品");
+    case'F': return std::move("食品");//近似于return char[4],char[4]的内容为“食品”
     case'C': return move("化妆品");
     case'B': return move("饮料");
     case'D': return move("日用品");
