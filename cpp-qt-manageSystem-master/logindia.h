@@ -2,6 +2,10 @@
 #define LOGINDIA_H
 
 #include <QDialog>
+#include <database.h>
+#include<QMessageBox>
+#include<QSqlQuery>
+#include<QSqlDatabase>
 
 namespace Ui {
 class LoginDia;
@@ -18,18 +22,25 @@ public:
 private slots:
 
 
-    void on_okBtn_released();
+    //void on_okBtn_released();
 
     void on_cancelBtn_released();
 
-    void on_chPwdEdit_released();
+    //void on_chPwdEdit_released();
 
     void on_aboutBtn_released();
 
+    void on_okBtn_clicked();
+    
+    void on_pushButton_clicked();
+    
 private:
     Ui::LoginDia *ui;
     QString _passWord;
     bool _canLog;
+    QSqlDatabase *db1;
+    QSqlQuery *query1;
+
 };
 
 #endif // LOGINDIA_H
