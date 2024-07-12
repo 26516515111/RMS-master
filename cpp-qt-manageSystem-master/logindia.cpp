@@ -3,6 +3,7 @@
 #include<QInputDialog>
 #include<QMessageBox>
 #include<fstream>
+#include<QSqlQuery>
 
 LoginDia::LoginDia(QWidget *parent) :
     QDialog(parent),
@@ -14,7 +15,9 @@ LoginDia::LoginDia(QWidget *parent) :
     QImage* keyImg=new QImage(":/new/prefix1/rc/key.png");
     ui->imgLab->setScaledContents(true);
     ui->imgLab->setPixmap(QPixmap::fromImage(*keyImg));
-    std::ifstream ifs("passWord.pwd");
+
+    //将密码写入记事本-->改为数据库
+    /*std::ifstream ifs("passWord.pwd");
     if(ifs.is_open())
     {
         std::string buff;
@@ -34,7 +37,9 @@ LoginDia::LoginDia(QWidget *parent) :
         std::ofstream ofs("passWord.pwd");
         ofs<<_passWord.toStdString();
         ofs.close();
-    }
+    }*///以上均可以改动==创建manager数据库（未实现）
+
+
 
 }
 
@@ -42,7 +47,7 @@ LoginDia::~LoginDia()
 {
     delete ui;
     std::ofstream ofs("password.pwd");
-    ofs<<_passWord.toStdString();
+    ofs<<_passWord.toStdString();//关闭数据库（未实现）
 }
 
 bool LoginDia::canLog()
@@ -52,6 +57,8 @@ bool LoginDia::canLog()
 
 void LoginDia::on_okBtn_released()  //确定密码
 {
+
+    //从数据库中的manager与customer中查询并检索（未实现）
     if(ui->pwdEdit->text() ==_passWord&&ui->accountEdit->text()==QString("admin"))
     {
         _canLog=true;
@@ -74,6 +81,9 @@ void LoginDia::on_cancelBtn_released()  //关闭窗口
 
 void LoginDia::on_chPwdEdit_released() //改密码
 {
+
+
+    //改密码前先确认账户
     bool ok;
     auto oriPwd = QInputDialog::getText(this,"输入","请输入旧密码:",
                                         QLineEdit::Password,"",&ok);
