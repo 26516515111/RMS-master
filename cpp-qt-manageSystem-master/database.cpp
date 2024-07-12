@@ -7,11 +7,11 @@ bool Database::createConnection(){
     QSqlDatabase db3=QSqlDatabase::addDatabase("QSQLITE","connection3");
 
     // 设置连接参数
-    db1.setDatabaseName("user_db");
+    db1.setDatabaseName("user.db");
 
-    db2.setDatabaseName("item_db");
+    db2.setDatabaseName("item.db");
 
-    db3.setDatabaseName("order_db");
+    db3.setDatabaseName("order.db");
     // 打开连接
     if (!db1.open()) {
         QMessageBox::critical(0,"错误","连接数据数据库失败",QMessageBox::Cancel);

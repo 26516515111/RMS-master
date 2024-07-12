@@ -20,9 +20,7 @@ LoginDia::LoginDia(QWidget *parent) :
     db1 = new QSqlDatabase (QSqlDatabase::database("connection1"));
     query1 = new QSqlQuery(*db1);
     bool success=query1->exec("CREATE TABLE IF NOT EXISTS users(account vachar PRIMARY KEY,password vachar)");
-    if(success)
-        QMessageBox::information(this,"成功","用户数据库表创建成功！",QMessageBox::Ok);
-    else
+    if(!success)
         QMessageBox::information(this,"失败","用户数据库表创建失败！",QMessageBox::Ok);
 
 
