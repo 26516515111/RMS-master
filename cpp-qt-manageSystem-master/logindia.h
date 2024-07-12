@@ -3,9 +3,6 @@
 
 #include <QDialog>
 #include <database.h>
-#include<QMessageBox>
-#include<QSqlQuery>
-#include<QSqlDatabase>
 
 namespace Ui {
 class LoginDia;
@@ -40,7 +37,6 @@ private:
     bool _canLog;
     QSqlDatabase *db1;
     QSqlQuery *query1;
-
 };
 
 #endif // LOGINDIA_H

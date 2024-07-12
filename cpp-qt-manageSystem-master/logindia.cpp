@@ -1,7 +1,7 @@
 #include "logindia.h"
 #include "ui_logindia.h"
 #include<QInputDialog>
-#include<fstream>
+//#include<fstream>
 
 LoginDia::LoginDia(QWidget *parent) :
     QDialog(parent),
@@ -13,10 +13,10 @@ LoginDia::LoginDia(QWidget *parent) :
     QImage* keyImg=new QImage(":/new/prefix1/rc/key.png");
     ui->imgLab->setScaledContents(true);
     ui->imgLab->setPixmap(QPixmap::fromImage(*keyImg));
-    
-    
-    
-    
+
+
+
+
     db1 = new QSqlDatabase (QSqlDatabase::database("connection1"));
     query1 = new QSqlQuery(*db1);
     bool success=query1->exec("CREATE TABLE IF NOT EXISTS users(account vachar PRIMARY KEY,password vachar)");
@@ -25,8 +25,8 @@ LoginDia::LoginDia(QWidget *parent) :
     else
         QMessageBox::information(this,"失败","用户数据库表创建失败！",QMessageBox::Ok);
 
-    
-    
+
+
     //将密码写入记事本-->改为数据库
     /*std::ifstream ifs("passWord.pwd");
     if(ifs.is_open())
@@ -59,7 +59,7 @@ LoginDia::~LoginDia()
     delete ui;
     delete query1;
     db1->close();
-    
+
 }
 
 bool LoginDia::canLog()
