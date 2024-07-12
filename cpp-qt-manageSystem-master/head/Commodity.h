@@ -21,14 +21,14 @@ public:
               std::string manufacturer, double price, double cost, int amount,bool onSale,int saleCount);
     virtual ~Commodity() = default;
 
-    int getAmount(void);
-    int getSaleCount(void);
-    void setSaleCount(int c);
-    std::string getManufacturer();
+    int getAmount(void);//返回库存数量
+    int getSaleCount(void);//返回销量
+    void setSaleCount(int c);//获得销售量
+    std::string getManufacturer();//返回厂家
     double getPrice(void);
     void setPrice(double p);
-    double getCost(void);
-    std::string getNo(void);
+    double getCost(void);//返回成本
+    std::string getNo(void);//返回编号(string 类型)
     std::string getName(void);
     std::string getBrand(void);
     std::string getClassStr(void);//获得商品类型
