@@ -32,7 +32,7 @@ background-color: rgb(38, 38, 38);</string>
   <widget class="QPushButton" name="okBtn">
    <property name="geometry">
     <rect>
-     <x>140</x>
+     <x>80</x>
      <y>280</y>
      <width>151</width>
      <height>41</height>
@@ -54,7 +54,7 @@ border-radius:8px</string>
   <widget class="QPushButton" name="cancelBtn">
    <property name="geometry">
     <rect>
-     <x>360</x>
+     <x>270</x>
      <y>280</y>
      <width>151</width>
      <height>41</height>
@@ -145,7 +145,7 @@ color: rgb(255, 255, 255);
   <widget class="QPushButton" name="chPwdEdit">
    <property name="geometry">
     <rect>
-     <x>140</x>
+     <x>80</x>
      <y>350</y>
      <width>151</width>
      <height>41</height>
@@ -199,7 +199,7 @@ color: rgb(255,255, 255);
   <widget class="QPushButton" name="aboutBtn">
    <property name="geometry">
     <rect>
-     <x>360</x>
+     <x>270</x>
      <y>350</y>
      <width>151</width>
      <height>41</height>
@@ -217,6 +217,30 @@ border-radius:8px</string>
    </property>
    <property name="text">
     <string>关于系统</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>280</y>
+     <width>151</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(17, 145, 255);
+color: rgb(255, 255, 255);
+background-color: rgb(17, 145, 255);
+color: rgb(255, 255, 255);
+font: 9pt &quot;楷体&quot;;
+font-size:25px;
+
+border:none;
+border-radius:8px</string>
+   </property>
+   <property name="text">
+    <string>注册</string>
    </property>
   </widget>
  </widget>
