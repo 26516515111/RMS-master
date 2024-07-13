@@ -149,3 +149,9 @@ void LoginDia::on_pushButton_clicked()
     ui->pwdEdit->clear();
 }
 
+
+void LoginDia::on_chPwdEdit_clicked()
+{
+
+}
+
