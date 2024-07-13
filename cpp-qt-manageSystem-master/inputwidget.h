@@ -3,6 +3,8 @@
 
 #include <QWidget>
 #include"head/RepManager.h"
+#include<QSqlDatabase>
+#include<QSqlQuery>
 
 namespace Ui {
 class InputWidget;
@@ -14,6 +16,7 @@ class InputWidget : public QWidget
 
 public:
     explicit InputWidget(char claasCh,QWidget *parent = nullptr,Commodity* com=nullptr);
+    //explicit InputWidget(char claasCh,QWidget *parent = nullptr,QString *nid=nullptr);
     ~InputWidget();
 
 private slots:
@@ -26,6 +29,9 @@ private:
     RepManager rm;
     char _classCh;
     Commodity* _com;
+    QString *nid;
+    QSqlDatabase *db2;
+    QSqlQuery *query2;
 };
 
 #endif // INPUTWIDGET_H

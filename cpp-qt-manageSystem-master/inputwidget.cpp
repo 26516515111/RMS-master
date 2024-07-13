@@ -6,6 +6,25 @@ InputWidget::InputWidget(char classCh,QWidget *parent,Commodity* com) :
     ui(new Ui::InputWidget),rm(),_classCh(classCh),_com(com)
 {
     ui->setupUi(this);
+
+    db2 = new QSqlDatabase(QSqlDatabase::database("connection2"));
+    query2=new QSqlQuery(*db2);
+    bool success=query2->exec("CREATE TABLE IF NOT EXISTS items("
+                                "id INTEGER PRIMARY KEY , " // 自增主键
+                                "product_code TEXT, "
+                                "product_type TEXT, "
+                                "unit_price REAL, "
+                                "stock_quantity INTEGER, "
+                                "brand TEXT, "
+                                "manufacturer TEXT, "
+                                "sales INTEGER, "
+                                "cost REAL, "
+                                "category TEXT, "
+                                "weight REAL)");
+    if(!success)
+        QMessageBox::information(this,"失败","用户数据库表创建失败！",QMessageBox::Ok);
+
+
     QStringList kList ;
     switch(_classCh)
     {
@@ -24,6 +43,25 @@ InputWidget::InputWidget(char classCh,QWidget *parent,Commodity* com) :
     }
     ui->kindBox->clear();
     ui->kindBox->addItems(kList); //设置下拉选择框内容
+
+    // if(nid){
+    //     query2->exec("select from *items");
+    //     while(query2->next()){
+    //         if(query2->value(0).toString()==*nid){
+    //             //数据库中种类为数字，代表第一种或者第二种
+    //             ui->kindBox->setCurrentIndex(query2->value(2).toInt());
+    //             ui->nameEdit->setText(query2->value(1).toString());
+    //             ui->brandEdit->setText(query2->value(5).toString());
+    //             ui->manuEdit->setText(query2->value(6).toString());
+    //             ui->priceBox->setValue(query2->value(3).toDouble());
+    //             ui->costBox->setValue(query2->value(8).toDouble());
+    //             ui->weightOrCapaBox->setValue(query2->value(10).toDouble());
+    //             ui->amountBox->setValue(query2->value(4).toInt());
+    //         }
+    //     }
+    // }
+
+
     if(com)
     {
         ui->kindBox->setCurrentIndex(com->getKind());
