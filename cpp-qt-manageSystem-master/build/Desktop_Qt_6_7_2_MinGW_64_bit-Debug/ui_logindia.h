@@ -40,12 +40,12 @@ public:
         LoginDia->resize(692, 409);
         LoginDia->setMinimumSize(QSize(692, 409));
         LoginDia->setMaximumSize(QSize(692, 409));
-        LoginDia->setStyleSheet(QString::fromUtf8("color: rgb(255,255,255);\n"
-"background-color: rgb(38, 38, 38);"));
+        LoginDia->setStyleSheet(QString::fromUtf8("color:rgb(255, 85, 127);\n"
+"background-color: rgb(248, 237, 227);"));
         okBtn = new QPushButton(LoginDia);
         okBtn->setObjectName("okBtn");
         okBtn->setGeometry(QRect(80, 280, 151, 41));
-        okBtn->setStyleSheet(QString::fromUtf8("background-color: rgb(17, 145, 255);\n"
+        okBtn->setStyleSheet(QString::fromUtf8("background-color: rgb(208, 184, 168);\n"
 "color: rgb(255, 255, 255);\n"
 "font: 9pt \"\346\245\267\344\275\223\";\n"
 "font-size:25px;\n"
@@ -55,9 +55,9 @@ public:
         cancelBtn = new QPushButton(LoginDia);
         cancelBtn->setObjectName("cancelBtn");
         cancelBtn->setGeometry(QRect(270, 280, 151, 41));
-        cancelBtn->setStyleSheet(QString::fromUtf8("background-color: rgb(17, 145, 255);\n"
+        cancelBtn->setStyleSheet(QString::fromUtf8("background-color: rgb(208, 184, 168);\n"
 "color: rgb(255, 255, 255);\n"
-"background-color: rgb(17, 145, 255);\n"
+"background-color: rgb(208, 184, 168);\n"
 "color: rgb(255, 255, 255);\n"
 "font: 9pt \"\346\245\267\344\275\223\";\n"
 "font-size:25px;\n"
@@ -67,31 +67,31 @@ public:
         accountEdit = new QLineEdit(LoginDia);
         accountEdit->setObjectName("accountEdit");
         accountEdit->setGeometry(QRect(340, 100, 221, 51));
-        accountEdit->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
+        accountEdit->setStyleSheet(QString::fromUtf8("color: rgb(141, 73, 58);\n"
 "font: 16pt \"Microsoft YaHei UI\";"));
         pwdEdit = new QLineEdit(LoginDia);
         pwdEdit->setObjectName("pwdEdit");
         pwdEdit->setGeometry(QRect(340, 200, 221, 51));
-        pwdEdit->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
+        pwdEdit->setStyleSheet(QString::fromUtf8("color: rgb(141, 73, 58);\n"
 "font: 16pt \"Microsoft YaHei UI\";"));
         pwdEdit->setEchoMode(QLineEdit::Password);
         label = new QLabel(LoginDia);
         label->setObjectName("label");
         label->setGeometry(QRect(220, 110, 81, 41));
         label->setStyleSheet(QString::fromUtf8("font: 22pt \"\346\245\267\344\275\223\";\n"
-"color: rgb(255,255,255);\n"
+"color: rgb(141, 73, 58);\n"
 ""));
         label_2 = new QLabel(LoginDia);
         label_2->setObjectName("label_2");
         label_2->setGeometry(QRect(220, 200, 81, 41));
         label_2->setStyleSheet(QString::fromUtf8("font: 22pt \"\346\245\267\344\275\223\";\n"
-"color: rgb(255, 255, 255);\n"
+"color: rgb(141, 73, 58);\n"
 ""));
         chPwdEdit = new QPushButton(LoginDia);
         chPwdEdit->setObjectName("chPwdEdit");
-        chPwdEdit->setGeometry(QRect(80, 350, 151, 41));
+        chPwdEdit->setGeometry(QRect(180, 350, 151, 41));
         chPwdEdit->setStyleSheet(QString::fromUtf8("\n"
-"background-color: rgb(17, 145, 255);\n"
+"background-color: rgb(208, 184, 168);\n"
 "color: rgb(255, 255, 255);\n"
 "font: 9pt \"\346\245\267\344\275\223\";\n"
 "font-size:25px;\n"
@@ -100,18 +100,21 @@ public:
 "border-radius:8px"));
         label_3 = new QLabel(LoginDia);
         label_3->setObjectName("label_3");
-        label_3->setGeometry(QRect(200, 10, 301, 61));
-        label_3->setStyleSheet(QString::fromUtf8("font: 25pt \"\346\245\267\344\275\223\";\n"
-"color: rgb(255,255, 255);\n"
+        label_3->setGeometry(QRect(200, 10, 361, 61));
+        label_3->setStyleSheet(QString::fromUtf8("font: 25pt ;\n"
+"font: 9pt ;\n"
+"font: 300 9pt ;\n"
+"font: 30pt \"\345\215\216\346\226\207\344\270\255\345\256\213\";\n"
+"color: rgb(141, 73, 58);\n"
 ""));
         imgLab = new QLabel(LoginDia);
         imgLab->setObjectName("imgLab");
         imgLab->setGeometry(QRect(80, 130, 90, 90));
         aboutBtn = new QPushButton(LoginDia);
         aboutBtn->setObjectName("aboutBtn");
-        aboutBtn->setGeometry(QRect(270, 350, 151, 41));
+        aboutBtn->setGeometry(QRect(380, 350, 151, 41));
         aboutBtn->setStyleSheet(QString::fromUtf8("\n"
-"background-color: rgb(17, 145, 255);\n"
+"background-color: rgb(208, 184, 168);\n"
 "color: rgb(255, 255, 255);\n"
 "font: 9pt \"\346\245\267\344\275\223\";\n"
 "font-size:25px;\n"
@@ -123,7 +126,7 @@ public:
         pushButton->setGeometry(QRect(480, 280, 151, 41));
         pushButton->setStyleSheet(QString::fromUtf8("background-color: rgb(17, 145, 255);\n"
 "color: rgb(255, 255, 255);\n"
-"background-color: rgb(17, 145, 255);\n"
+"background-color: rgb(208, 184, 168);\n"
 "color: rgb(255, 255, 255);\n"
 "font: 9pt \"\346\245\267\344\275\223\";\n"
 "font-size:25px;\n"

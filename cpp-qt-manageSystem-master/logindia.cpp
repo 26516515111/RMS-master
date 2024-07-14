@@ -1,6 +1,7 @@
 #include "logindia.h"
 #include "ui_logindia.h"
 #include<QInputDialog>
+
 //#include<fstream>
 
 LoginDia::LoginDia(QWidget *parent) :
@@ -9,7 +10,7 @@ LoginDia::LoginDia(QWidget *parent) :
 {
     _canLog=false;
     ui->setupUi(this);
-    this->setWindowIcon(QIcon(":/new/prefix1/rc/n133f35jvek.jpg"));
+    this->setWindowIcon(QIcon("D:/git/RMS-master/cpp-qt-manageSystem-master/rc/swjtu.png"));
     QImage* keyImg=new QImage(":/new/prefix1/rc/key.png");
     ui->imgLab->setScaledContents(true);
     ui->imgLab->setPixmap(QPixmap::fromImage(*keyImg));
@@ -125,6 +126,7 @@ void LoginDia::on_okBtn_clicked()//按确定按钮登录
 void LoginDia::on_aboutBtn_released()
 {
     QMessageBox::about(this,tr("关于系统"),tr("制作者：向荟婷 吴雨轩 杨智羚 张鑫月\n\n系统版本：V1.0\n\nQt版本：Qt 6.7.2"));
+
 }
 
 

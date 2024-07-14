@@ -26,8 +26,8 @@
    <string>登录</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">color: rgb(255,255,255);
-background-color: rgb(38, 38, 38);</string>
+   <string notr="true">color:rgb(255, 85, 127);
+background-color: rgb(248, 237, 227);</string>
   </property>
   <widget class="QPushButton" name="okBtn">
    <property name="geometry">
@@ -39,7 +39,7 @@ background-color: rgb(38, 38, 38);</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(17, 145, 255);
+    <string notr="true">background-color: rgb(208, 184, 168);
 color: rgb(255, 255, 255);
 font: 9pt &quot;楷体&quot;;
 font-size:25px;
@@ -61,9 +61,9 @@ border-radius:8px</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(17, 145, 255);
+    <string notr="true">background-color: rgb(208, 184, 168);
 color: rgb(255, 255, 255);
-background-color: rgb(17, 145, 255);
+background-color: rgb(208, 184, 168);
 color: rgb(255, 255, 255);
 font: 9pt &quot;楷体&quot;;
 font-size:25px;
@@ -85,7 +85,7 @@ border-radius:8px</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);
+    <string notr="true">color: rgb(141, 73, 58);
 font: 16pt &quot;Microsoft YaHei UI&quot;;</string>
    </property>
   </widget>
@@ -99,7 +99,7 @@ font: 16pt &quot;Microsoft YaHei UI&quot;;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);
+    <string notr="true">color: rgb(141, 73, 58);
 font: 16pt &quot;Microsoft YaHei UI&quot;;</string>
    </property>
    <property name="echoMode">
@@ -117,7 +117,7 @@ font: 16pt &quot;Microsoft YaHei UI&quot;;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">font: 22pt &quot;楷体&quot;;
-color: rgb(255,255,255);
+color: rgb(141, 73, 58);
 </string>
    </property>
    <property name="text">
@@ -135,7 +135,7 @@ color: rgb(255,255,255);
    </property>
    <property name="styleSheet">
     <string notr="true">font: 22pt &quot;楷体&quot;;
-color: rgb(255, 255, 255);
+color: rgb(141, 73, 58);
 </string>
    </property>
    <property name="text">
@@ -145,7 +145,7 @@ color: rgb(255, 255, 255);
   <widget class="QPushButton" name="chPwdEdit">
    <property name="geometry">
     <rect>
-     <x>80</x>
+     <x>180</x>
      <y>350</y>
      <width>151</width>
      <height>41</height>
@@ -153,7 +153,7 @@ color: rgb(255, 255, 255);
    </property>
    <property name="styleSheet">
     <string notr="true">
-background-color: rgb(17, 145, 255);
+background-color: rgb(208, 184, 168);
 color: rgb(255, 255, 255);
 font: 9pt &quot;楷体&quot;;
 font-size:25px;
@@ -170,13 +170,16 @@ border-radius:8px</string>
     <rect>
      <x>200</x>
      <y>10</y>
-     <width>301</width>
+     <width>361</width>
      <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 25pt &quot;楷体&quot;;
-color: rgb(255,255, 255);
+    <string notr="true">font: 25pt ;
+font: 9pt ;
+font: 300 9pt ;
+font: 30pt &quot;华文中宋&quot;;
+color: rgb(141, 73, 58);
 </string>
    </property>
    <property name="text">
@@ -199,7 +202,7 @@ color: rgb(255,255, 255);
   <widget class="QPushButton" name="aboutBtn">
    <property name="geometry">
     <rect>
-     <x>270</x>
+     <x>380</x>
      <y>350</y>
      <width>151</width>
      <height>41</height>
@@ -207,7 +210,7 @@ color: rgb(255,255, 255);
    </property>
    <property name="styleSheet">
     <string notr="true">
-background-color: rgb(17, 145, 255);
+background-color: rgb(208, 184, 168);
 color: rgb(255, 255, 255);
 font: 9pt &quot;楷体&quot;;
 font-size:25px;
@@ -231,7 +234,7 @@ border-radius:8px</string>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(17, 145, 255);
 color: rgb(255, 255, 255);
-background-color: rgb(17, 145, 255);
+background-color: rgb(208, 184, 168);
 color: rgb(255, 255, 255);
 font: 9pt &quot;楷体&quot;;
 font-size:25px;

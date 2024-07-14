@@ -21,7 +21,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     //设置图标
-    this->setWindowIcon(QIcon(":/new/prefix1/rc/n133f35jvek.jpg"));
+    this->setWindowIcon(QIcon("D:/git/RMS-master/cpp-qt-manageSystem-master/rc/swjtu.png"));
 
     auto setImg = [](QString imgStr,QLabel *& label)  //设置图片
     {
@@ -40,9 +40,9 @@ MainWindow::MainWindow(QWidget *parent)
     };
     setImg(":/new/prefix1/rc/money.png",ui->moneyImgLab);
     setImg(":/new/prefix1/rc/buyCar.png",ui->buyCarLab);
-    setGif(":/new/prefix1/rc/9954a5f7dfd64e7bafc23eda4e8b9487.gif",ui->gifLab,this,QSize(311,121));
-    setGif(":/new/prefix1/rc/show.gif",ui->gifShowLab,this,QSize(171,171));
-    setGif(":/new/prefix1/rc/manage.gif",ui->gifManLab,this,QSize(151,151));
+   // setGif(":/new/prefix1/rc/9954a5f7dfd64e7bafc23eda4e8b9487.gif",ui->gifLab,this,QSize(311,121));
+   // setGif(":/new/prefix1/rc/show.gif",ui->gifShowLab,this,QSize(171,171));
+   // setGif(":/new/prefix1/rc/manage.gif",ui->gifManLab,this,QSize(151,151));
     //设置定时器
     ui->timeLcd->setSegmentStyle(QLCDNumber::Filled);
     ui->timeLcd->setDigitCount(20); //数字位数
@@ -54,11 +54,12 @@ MainWindow::MainWindow(QWidget *parent)
     });
 
     //背景透明 设置字体色
-    ui->timeLcd->setStyleSheet("background:transparent;color:#00ccff;");
-    ui->totalMoneyLcd->setStyleSheet("background:transparent;color:#00ccff;");
-    ui->totalLcd->setStyleSheet("background:transparent;color:#00ccff;");
-    ui->sumCostLcd->setStyleSheet("background:transparent;color:#00ccff;");
-    ui->sumRevenLcd->setStyleSheet("background:transparent;color:#00ccff;");
+   /* ui->timeLcd->setStyleSheet("background-color:white;color:white;");
+    ui->totalMoneyLcd->setStyleSheet("background-color:white;color:white;");
+    ui->totalLcd->setStyleSheet("background-color:white;color:white;");
+    ui->sumCostLcd->setStyleSheet("background-color:white;color:white;");
+    ui->sumRevenLcd->setStyleSheet("background-color:white;color:white;");*/
+    ui->stackedWidget->setStyleSheet("background-color:#F8EDE3;border-color:#F8EDE3;");
     //表格禁止编辑
     ui->saledComsTab->setEditTriggers(QAbstractItemView::NoEditTriggers);
     ui->comsTab->setEditTriggers(QAbstractItemView::NoEditTriggers);

@@ -43,7 +43,6 @@ public:
     QPushButton *saleStatBtn;
     QPushButton *comManagerBtn;
     QLCDNumber *timeLcd;
-    QLabel *gifLab;
     QWidget *buyPg;
     QLabel *label_3;
     QLabel *label_4;
@@ -118,7 +117,7 @@ public:
         stackedWidget->setEnabled(true);
         stackedWidget->setStyleSheet(QString::fromUtf8("QStackedWidget\n"
 "{\n"
-"background-color: rgb(38, 38, 38);\n"
+"background-color: rgb(248, 237, 227);\n"
 "\n"
 "border:None;\n"
 "margin:0 0 0 0;\n"
@@ -131,7 +130,7 @@ public:
 "\n"
 "QInputDialog\n"
 "{\n"
-"	color:white;\n"
+"	color:rgb(141, 73, 58);\n"
 "}\n"
 "\n"
 ""));
@@ -140,124 +139,125 @@ public:
         label = new QLabel(mainPg);
         label->setObjectName("label");
         label->setGeometry(QRect(360, 20, 411, 91));
-        label->setStyleSheet(QString::fromUtf8("font: 36pt \"\346\245\267\344\275\223\";"));
+        label->setStyleSheet(QString::fromUtf8("font: 36pt \"\346\245\267\344\275\223\";\n"
+"color:rgb(141, 73, 58)"));
         addBtn = new QPushButton(mainPg);
         addBtn->setObjectName("addBtn");
         addBtn->setGeometry(QRect(100, 180, 191, 51));
-        addBtn->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.189944 rgba(202, 144, 87, 255), stop:0.726257 rgba(235, 148, 61, 255), stop:1 rgba(143, 143, 143, 255));\n"
+        addBtn->setStyleSheet(QString::fromUtf8("background-color: rgb(208, 184, 168);\n"
 "font: 9pt \"\346\245\267\344\275\223\";\n"
 "font-size:25px;\n"
-"color: rgb(255, 255, 255);\n"
+"color: rgb(141, 73, 58);\n"
 "border:none;\n"
 "border-radius:8px"));
         showBtn = new QPushButton(mainPg);
         showBtn->setObjectName("showBtn");
         showBtn->setGeometry(QRect(430, 180, 191, 51));
-        showBtn->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.189944 rgba(202, 144, 87, 255), stop:0.726257 rgba(235, 148, 61, 255), stop:1 rgba(143, 143, 143, 255));\n"
+        showBtn->setStyleSheet(QString::fromUtf8("background-color: rgb(208, 184, 168);\n"
 "font: 9pt \"\346\245\267\344\275\223\";\n"
 "font-size:25px;\n"
-"color: rgb(255, 255, 255);\n"
+"color: rgb(141, 73, 58);\n"
 "border:none;\n"
 "border-radius:8px\n"
 ""));
         buyBtn = new QPushButton(mainPg);
         buyBtn->setObjectName("buyBtn");
         buyBtn->setGeometry(QRect(780, 180, 191, 51));
-        buyBtn->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.189944 rgba(202, 144, 87, 255), stop:0.726257 rgba(235, 148, 61, 255), stop:1 rgba(143, 143, 143, 255));\n"
+        buyBtn->setStyleSheet(QString::fromUtf8("background-color: rgb(208, 184, 168);\n"
 "font: 9pt \"\346\245\267\344\275\223\";\n"
 "font-size:25px;\n"
-"color: rgb(255, 255, 255);\n"
+"color: rgb(141, 73, 58);\n"
 "border:none;\n"
 "border-radius:8px"));
         exitBtn = new QPushButton(mainPg);
         exitBtn->setObjectName("exitBtn");
         exitBtn->setGeometry(QRect(780, 300, 191, 51));
-        exitBtn->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.189944 rgba(202, 144, 87, 255), stop:0.726257 rgba(235, 148, 61, 255), stop:1 rgba(143, 143, 143, 255));\n"
+        exitBtn->setStyleSheet(QString::fromUtf8("background-color: rgb(208, 184, 168);\n"
 "font: 9pt \"\346\245\267\344\275\223\";\n"
 "font-size:25px;\n"
-"color: rgb(255, 255, 255);\n"
+"color: rgb(141, 73, 58);\n"
 "border:none;\n"
 "border-radius:8px\n"
 ""));
         saleStatBtn = new QPushButton(mainPg);
         saleStatBtn->setObjectName("saleStatBtn");
         saleStatBtn->setGeometry(QRect(100, 300, 191, 51));
-        saleStatBtn->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.189944 rgba(202, 144, 87, 255), stop:0.726257 rgba(235, 148, 61, 255), stop:1 rgba(143, 143, 143, 255));\n"
+        saleStatBtn->setStyleSheet(QString::fromUtf8("background-color: rgb(208, 184, 168);\n"
 "font: 9pt \"\346\245\267\344\275\223\";\n"
 "font-size:25px;\n"
-"color: rgb(255, 255, 255);\n"
+"color:rgb(141, 73, 58);\n"
 "border:none;\n"
 "border-radius:8px"));
         comManagerBtn = new QPushButton(mainPg);
         comManagerBtn->setObjectName("comManagerBtn");
         comManagerBtn->setGeometry(QRect(430, 300, 191, 51));
-        comManagerBtn->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.189944 rgba(202, 144, 87, 255), stop:0.726257 rgba(235, 148, 61, 255), stop:1 rgba(143, 143, 143, 255));\n"
+        comManagerBtn->setStyleSheet(QString::fromUtf8("background-color: rgb(208, 184, 168);\n"
 "font: 9pt \"\346\245\267\344\275\223\";\n"
 "font-size:25px;\n"
-"color: rgb(255, 255, 255);\n"
+"color: rgb(141, 73, 58);\n"
 "border:none;\n"
 "border-radius:8px"));
         timeLcd = new QLCDNumber(mainPg);
         timeLcd->setObjectName("timeLcd");
-        timeLcd->setGeometry(QRect(540, 430, 471, 91));
+        timeLcd->setGeometry(QRect(310, 490, 471, 91));
         timeLcd->setSmallDecimalPoint(false);
         timeLcd->setMode(QLCDNumber::Dec);
         timeLcd->setProperty("value", QVariant(1055.000000000000000));
         timeLcd->setProperty("intValue", QVariant(1055));
-        gifLab = new QLabel(mainPg);
-        gifLab->setObjectName("gifLab");
-        gifLab->setGeometry(QRect(80, 420, 311, 121));
         stackedWidget->addWidget(mainPg);
         buyPg = new QWidget();
         buyPg->setObjectName("buyPg");
         label_3 = new QLabel(buyPg);
         label_3->setObjectName("label_3");
         label_3->setGeometry(QRect(340, 410, 91, 20));
-        label_3->setStyleSheet(QString::fromUtf8("font: 18pt \"\346\245\267\344\275\223\";"));
+        label_3->setStyleSheet(QString::fromUtf8("font: 18pt \"\346\245\267\344\275\223\";\n"
+"color:rgb(141, 73, 58)"));
         label_4 = new QLabel(buyPg);
         label_4->setObjectName("label_4");
         label_4->setGeometry(QRect(360, 490, 91, 31));
-        label_4->setStyleSheet(QString::fromUtf8("font: 18pt \"\346\245\267\344\275\223\";"));
+        label_4->setStyleSheet(QString::fromUtf8("font: 18pt \"\346\245\267\344\275\223\";\n"
+"color:rgb(141, 73, 58);"));
         noEdit = new QLineEdit(buyPg);
         noEdit->setObjectName("noEdit");
         noEdit->setGeometry(QRect(470, 400, 161, 41));
         noEdit->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
-"color: rgb(0, 0, 0);"));
+"color: rgb(141, 73, 58);"));
         countBox = new QSpinBox(buyPg);
         countBox->setObjectName("countBox");
         countBox->setGeometry(QRect(470, 490, 81, 41));
         countBox->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
-"color: rgb(0, 0, 0);"));
+"color:rgb(141, 73, 58);"));
         countBox->setMinimum(1);
         sureAddBtn = new QPushButton(buyPg);
         sureAddBtn->setObjectName("sureAddBtn");
         sureAddBtn->setGeometry(QRect(590, 480, 151, 51));
-        sureAddBtn->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.189944 rgba(202, 144, 87, 255), stop:0.726257 rgba(235, 148, 61, 255), stop:1 rgba(143, 143, 143, 255));\n"
+        sureAddBtn->setStyleSheet(QString::fromUtf8("background-color:rgb(208, 184, 168);\n"
 "font: 9pt \"\346\245\267\344\275\223\";\n"
 "font-size:25px;\n"
-"color: rgb(255, 255, 255);\n"
+"color:rgb(141, 73, 58);\n"
 "border:none;\n"
 "border-radius:8px"));
         endBuyBtn = new QPushButton(buyPg);
         endBuyBtn->setObjectName("endBuyBtn");
         endBuyBtn->setGeometry(QRect(920, 260, 151, 51));
-        endBuyBtn->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.189944 rgba(202, 144, 87, 255), stop:0.726257 rgba(235, 148, 61, 255), stop:1 rgba(143, 143, 143, 255));\n"
+        endBuyBtn->setStyleSheet(QString::fromUtf8("background-color: rgb(208, 184, 168);\n"
 "font: 9pt \"\346\245\267\344\275\223\";\n"
 "font-size:25px;\n"
-"color: rgb(255, 255, 255);\n"
+"color: rgb(141, 73, 58);\n"
 "border:none;\n"
 "border-radius:8px"));
         label_5 = new QLabel(buyPg);
         label_5->setObjectName("label_5");
         label_5->setGeometry(QRect(820, 430, 111, 51));
-        label_5->setStyleSheet(QString::fromUtf8("font: 25pt \"\346\245\267\344\275\223\";"));
+        label_5->setStyleSheet(QString::fromUtf8("font: 25pt \"\346\245\267\344\275\223\";\n"
+"color:rgb(141, 73, 58)"));
         backBtn = new QPushButton(buyPg);
         backBtn->setObjectName("backBtn");
         backBtn->setGeometry(QRect(0, 0, 131, 61));
-        backBtn->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.189944 rgba(202, 144, 87, 255), stop:0.726257 rgba(235, 148, 61, 255), stop:1 rgba(143, 143, 143, 255));\n"
+        backBtn->setStyleSheet(QString::fromUtf8("background-color: rgb(208, 184, 168);\n"
 "font: 9pt \"\346\245\267\344\275\223\";\n"
 "font-size:25px;\n"
-"color: rgb(255, 255, 255);\n"
+"color: rgb(141, 73, 58);\n"
 "border:none;\n"
 "border-radius:8px"));
         saledComsTab = new QTableWidget(buyPg);
@@ -294,14 +294,14 @@ public:
         saledComsTab->setGeometry(QRect(170, 120, 731, 241));
         saledComsTab->setStyleSheet(QString::fromUtf8(".QTableWidget\n"
 "{\n"
-"	color: rgb(255, 255, 255);\n"
+"	color:rgb(141, 73, 58);\n"
 "font: 17pt \"\346\245\267\344\275\223\";\n"
 "}"));
         label_12 = new QLabel(buyPg);
         label_12->setObjectName("label_12");
         label_12->setGeometry(QRect(450, 10, 201, 91));
         label_12->setStyleSheet(QString::fromUtf8("font: 36pt \"\346\245\267\344\275\223\";\n"
-"color: rgb(255, 255, 255);"));
+"color:rgb(141, 73, 58);"));
         label_12->setAlignment(Qt::AlignCenter);
         totalLcd = new QLCDNumber(buyPg);
         totalLcd->setObjectName("totalLcd");
@@ -317,7 +317,7 @@ public:
         label_24->setObjectName("label_24");
         label_24->setGeometry(QRect(350, -10, 411, 91));
         label_24->setStyleSheet(QString::fromUtf8("font: 36pt \"\346\245\267\344\275\223\";\n"
-"color: rgb(255, 255, 255);"));
+"color: rgb(141, 73, 58);"));
         label_24->setAlignment(Qt::AlignCenter);
         comsManTab = new QTableWidget(managerPg);
         if (comsManTab->columnCount() < 11)
@@ -348,23 +348,23 @@ public:
         comsManTab->setGeometry(QRect(0, 80, 1161, 321));
         comsManTab->setStyleSheet(QString::fromUtf8(".QTableWidget\n"
 "{\n"
-"color: rgb(255, 255, 255);\n"
+"color: rgb(141, 73, 58);\n"
 "font: 13pt \"\346\245\267\344\275\223\";\n"
 "}"));
         backBtn_5 = new QPushButton(managerPg);
         backBtn_5->setObjectName("backBtn_5");
         backBtn_5->setGeometry(QRect(0, 0, 131, 61));
-        backBtn_5->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.189944 rgba(202, 144, 87, 255), stop:0.726257 rgba(235, 148, 61, 255), stop:1 rgba(143, 143, 143, 255));\n"
+        backBtn_5->setStyleSheet(QString::fromUtf8("background-color: rgb(208, 184, 168);\n"
 "font: 9pt \"\346\245\267\344\275\223\";\n"
 "font-size:25px;\n"
-"color: rgb(255, 255, 255);\n"
+"color:rgb(141, 73, 58);\n"
 "border:none;\n"
 "border-radius:8px"));
         label_25 = new QLabel(managerPg);
         label_25->setObjectName("label_25");
         label_25->setGeometry(QRect(730, 430, 161, 51));
         label_25->setStyleSheet(QString::fromUtf8("font: 25pt \"\346\245\267\344\275\223\";\n"
-"color: rgb(255, 255, 255);"));
+"color:rgb(141, 73, 58);"));
         searchKeyBox = new QComboBox(managerPg);
         searchKeyBox->addItem(QString());
         searchKeyBox->addItem(QString());
@@ -373,28 +373,28 @@ public:
         searchKeyBox->addItem(QString());
         searchKeyBox->setObjectName("searchKeyBox");
         searchKeyBox->setGeometry(QRect(900, 430, 91, 51));
-        searchKeyBox->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
+        searchKeyBox->setStyleSheet(QString::fromUtf8("color:rgb(141, 73, 58);"));
         startSeachBtn = new QPushButton(managerPg);
         startSeachBtn->setObjectName("startSeachBtn");
         startSeachBtn->setGeometry(QRect(1000, 450, 71, 31));
-        startSeachBtn->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.189944 rgba(202, 144, 87, 255), stop:0.726257 rgba(235, 148, 61, 255), stop:1 rgba(143, 143, 143, 255));\n"
+        startSeachBtn->setStyleSheet(QString::fromUtf8("background-color: rgb(208, 184, 168);\n"
 "font: 9pt \"\346\245\267\344\275\223\";\n"
 "font-size:25px;\n"
-"color: rgb(255, 255, 255);\n"
+"color: rgb(141, 73, 58);\n"
 "border:none;\n"
 "border-radius:8px"));
         label_26 = new QLabel(managerPg);
         label_26->setObjectName("label_26");
         label_26->setGeometry(QRect(0, 420, 351, 41));
         label_26->setStyleSheet(QString::fromUtf8("font: 18pt \"\346\245\267\344\275\223\";\n"
-"color: rgb(255, 255, 255);"));
+"color:rgb(141, 73, 58);"));
         deleteBtn = new QPushButton(managerPg);
         deleteBtn->setObjectName("deleteBtn");
         deleteBtn->setGeometry(QRect(430, 420, 241, 61));
-        deleteBtn->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.189944 rgba(202, 144, 87, 255), stop:0.726257 rgba(235, 148, 61, 255), stop:1 rgba(143, 143, 143, 255));\n"
+        deleteBtn->setStyleSheet(QString::fromUtf8("background-color: rgb(208, 184, 168);\n"
 "font: 9pt \"\346\245\267\344\275\223\";\n"
 "font-size:25px;\n"
-"color: rgb(255, 255, 255);\n"
+"color: rgb(141, 73, 58);\n"
 "border:none;\n"
 "border-radius:8px"));
         gifManLab = new QLabel(managerPg);
@@ -406,10 +406,10 @@ public:
         backBtn_3 = new QPushButton(saleStatPg);
         backBtn_3->setObjectName("backBtn_3");
         backBtn_3->setGeometry(QRect(0, 0, 131, 61));
-        backBtn_3->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.189944 rgba(202, 144, 87, 255), stop:0.726257 rgba(235, 148, 61, 255), stop:1 rgba(143, 143, 143, 255));\n"
+        backBtn_3->setStyleSheet(QString::fromUtf8("background-color: rgb(208, 184, 168);\n"
 "font: 9pt \"\346\245\267\344\275\223\";\n"
 "font-size:25px;\n"
-"color: rgb(255, 255, 255);\n"
+"color: rgb(141, 73, 58);\n"
 "border:none;\n"
 "border-radius:8px"));
         comTabRec = new QTableWidget(saleStatPg);
@@ -437,83 +437,89 @@ public:
         comTabRec->setGeometry(QRect(10, 120, 831, 301));
         comTabRec->setStyleSheet(QString::fromUtf8(".QTableWidget\n"
 "{\n"
-"	color: rgb(255, 255, 255);\n"
+"	color: rgb(141, 73, 58);\n"
 "font: 17pt \"\346\245\267\344\275\223\";\n"
 "}"));
         label_9 = new QLabel(saleStatPg);
         label_9->setObjectName("label_9");
         label_9->setGeometry(QRect(50, 460, 91, 31));
-        label_9->setStyleSheet(QString::fromUtf8("font: 18pt \"\346\245\267\344\275\223\";"));
+        label_9->setStyleSheet(QString::fromUtf8("font: 18pt \"\346\245\267\344\275\223\";\n"
+"color:rgb(141, 73, 58)"));
         trIdEdit = new QLineEdit(saleStatPg);
         trIdEdit->setObjectName("trIdEdit");
         trIdEdit->setGeometry(QRect(160, 450, 161, 51));
         trIdEdit->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
-"color: rgb(0, 0, 0);\n"
+"color: rgb(141, 73, 58);\n"
 "font: 16pt \"\346\245\267\344\275\223\";"));
         searchBtn = new QPushButton(saleStatPg);
         searchBtn->setObjectName("searchBtn");
         searchBtn->setGeometry(QRect(60, 510, 101, 31));
-        searchBtn->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.189944 rgba(202, 144, 87, 255), stop:0.726257 rgba(235, 148, 61, 255), stop:1 rgba(143, 143, 143, 255));\n"
+        searchBtn->setStyleSheet(QString::fromUtf8("background-color: rgb(208, 184, 168);\n"
 "font: 9pt \"\346\245\267\344\275\223\";\n"
 "font-size:25px;\n"
-"color: rgb(255, 255, 255);\n"
+"color: rgb(141, 73, 58);\n"
 "border:none;\n"
 "border-radius:8px"));
         changeBtn = new QPushButton(saleStatPg);
         changeBtn->setObjectName("changeBtn");
         changeBtn->setGeometry(QRect(90, 560, 161, 31));
-        changeBtn->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.189944 rgba(202, 144, 87, 255), stop:0.726257 rgba(235, 148, 61, 255), stop:1 rgba(143, 143, 143, 255));\n"
+        changeBtn->setStyleSheet(QString::fromUtf8("background-color: rgb(208, 184, 168);\n"
 "font: 9pt \"\346\245\267\344\275\223\";\n"
 "font-size:25px;\n"
-"color: rgb(255, 255, 255);\n"
+"color: rgb(141, 73, 58);\n"
 "border:none;\n"
 "border-radius:8px"));
         returnBtn_2 = new QPushButton(saleStatPg);
         returnBtn_2->setObjectName("returnBtn_2");
         returnBtn_2->setGeometry(QRect(220, 510, 101, 31));
-        returnBtn_2->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.189944 rgba(202, 144, 87, 255), stop:0.726257 rgba(235, 148, 61, 255), stop:1 rgba(143, 143, 143, 255));\n"
+        returnBtn_2->setStyleSheet(QString::fromUtf8("background-color: rgb(208, 184, 168);\n"
 "font: 9pt \"\346\245\267\344\275\223\";\n"
 "font-size:25px;\n"
-"color: rgb(255, 255, 255);\n"
+"color:rgb(141, 73, 58);\n"
 "border:none;\n"
 "border-radius:8px"));
         label_10 = new QLabel(saleStatPg);
         label_10->setObjectName("label_10");
         label_10->setGeometry(QRect(580, 430, 151, 41));
-        label_10->setStyleSheet(QString::fromUtf8("font: 18pt \"\346\245\267\344\275\223\";"));
+        label_10->setStyleSheet(QString::fromUtf8("font: 18pt \"\346\245\267\344\275\223\";\n"
+"color:rgb(141, 73, 58);"));
         label_11 = new QLabel(saleStatPg);
         label_11->setObjectName("label_11");
         label_11->setGeometry(QRect(370, 10, 261, 91));
-        label_11->setStyleSheet(QString::fromUtf8("font: 36pt \"\346\245\267\344\275\223\";"));
+        label_11->setStyleSheet(QString::fromUtf8("font: 36pt \"\346\245\267\344\275\223\";\n"
+"color:rgb(141, 73, 58)"));
         label_11->setAlignment(Qt::AlignCenter);
         label_13 = new QLabel(saleStatPg);
         label_13->setObjectName("label_13");
         label_13->setGeometry(QRect(850, 160, 121, 31));
-        label_13->setStyleSheet(QString::fromUtf8("font: 18pt \"\346\245\267\344\275\223\";"));
+        label_13->setStyleSheet(QString::fromUtf8("font: 18pt \"\346\245\267\344\275\223\";\n"
+"color:rgb(141, 73, 58);"));
         label_14 = new QLabel(saleStatPg);
         label_14->setObjectName("label_14");
         label_14->setGeometry(QRect(850, 250, 91, 31));
-        label_14->setStyleSheet(QString::fromUtf8("font: 14pt \"\346\245\267\344\275\223\";"));
+        label_14->setStyleSheet(QString::fromUtf8("font: 14pt \"\346\245\267\344\275\223\";\n"
+"color:rgb(141, 73, 58)"));
         label_15 = new QLabel(saleStatPg);
         label_15->setObjectName("label_15");
         label_15->setGeometry(QRect(850, 350, 91, 31));
-        label_15->setStyleSheet(QString::fromUtf8("font: 14pt \"\346\245\267\344\275\223\";"));
+        label_15->setStyleSheet(QString::fromUtf8("font: 14pt \"\346\245\267\344\275\223\";\n"
+"color:rgb(141, 73, 58)"));
         totalMoneyLcd = new QLCDNumber(saleStatPg);
         totalMoneyLcd->setObjectName("totalMoneyLcd");
         totalMoneyLcd->setGeometry(QRect(690, 430, 151, 51));
         totalMoneyLcd->setDigitCount(8);
         sumRevenLcd = new QLCDNumber(saleStatPg);
         sumRevenLcd->setObjectName("sumRevenLcd");
-        sumRevenLcd->setGeometry(QRect(950, 240, 201, 51));
+        sumRevenLcd->setGeometry(QRect(950, 240, 161, 51));
         sumRevenLcd->setDigitCount(11);
         sumCostLcd = new QLCDNumber(saleStatPg);
         sumCostLcd->setObjectName("sumCostLcd");
-        sumCostLcd->setGeometry(QRect(950, 340, 201, 51));
+        sumCostLcd->setGeometry(QRect(950, 340, 161, 51));
         sumCostLcd->setDigitCount(11);
         nextBtn = new QPushButton(saleStatPg);
         nextBtn->setObjectName("nextBtn");
         nextBtn->setGeometry(QRect(330, 480, 51, 20));
-        nextBtn->setStyleSheet(QString::fromUtf8("background-color: rgb(17, 145, 255);\n"
+        nextBtn->setStyleSheet(QString::fromUtf8("background-color: rgb(208, 184, 168);\n"
 "color: rgb(255, 255, 255);\n"
 "font: 1pt \"\346\245\267\344\275\223\";\n"
 "font-size:25px;\n"
@@ -523,7 +529,7 @@ public:
         lastBtn = new QPushButton(saleStatPg);
         lastBtn->setObjectName("lastBtn");
         lastBtn->setGeometry(QRect(330, 450, 51, 20));
-        lastBtn->setStyleSheet(QString::fromUtf8("background-color: rgb(17, 145, 255);\n"
+        lastBtn->setStyleSheet(QString::fromUtf8("background-color: rgb(208, 184, 168);\n"
 "color: rgb(255, 255, 255);\n"
 "font: 1pt \"\346\245\267\344\275\223\";\n"
 "font-size:25px;\n"
@@ -539,10 +545,10 @@ public:
         backBtn_2 = new QPushButton(showPg);
         backBtn_2->setObjectName("backBtn_2");
         backBtn_2->setGeometry(QRect(0, 0, 131, 61));
-        backBtn_2->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.189944 rgba(202, 144, 87, 255), stop:0.726257 rgba(235, 148, 61, 255), stop:1 rgba(143, 143, 143, 255));\n"
+        backBtn_2->setStyleSheet(QString::fromUtf8("background-color:rgb(208, 184, 168);\n"
 "font: 9pt \"\346\245\267\344\275\223\";\n"
 "font-size:25px;\n"
-"color: rgb(255, 255, 255);\n"
+"color: rgb(141, 73, 58);\n"
 "border:none;\n"
 "border-radius:8px"));
         comsTab = new QTableWidget(showPg);
@@ -574,14 +580,14 @@ public:
         comsTab->setGeometry(QRect(0, 80, 1161, 401));
         comsTab->setStyleSheet(QString::fromUtf8(".QTableWidget\n"
 "{\n"
-"	color: rgb(255, 255, 255);\n"
+"	color:rgb(141, 73, 58);\n"
 "font: 13pt \"\346\245\267\344\275\223\";\n"
 "}"));
         label_6 = new QLabel(showPg);
         label_6->setObjectName("label_6");
         label_6->setGeometry(QRect(440, 0, 261, 71));
         label_6->setStyleSheet(QString::fromUtf8("font: 36pt \"\346\245\267\344\275\223\";\n"
-"color: rgb(255, 255, 255);"));
+"color: rgb(141, 73, 58);"));
         label_6->setAlignment(Qt::AlignCenter);
         sortKeyBox = new QComboBox(showPg);
         sortKeyBox->addItem(QString());
@@ -590,30 +596,30 @@ public:
         sortKeyBox->addItem(QString());
         sortKeyBox->setObjectName("sortKeyBox");
         sortKeyBox->setGeometry(QRect(580, 510, 111, 41));
-        sortKeyBox->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
+        sortKeyBox->setStyleSheet(QString::fromUtf8("color: rgb(141, 73, 58);"));
         sortdirBox = new QComboBox(showPg);
         sortdirBox->addItem(QString());
         sortdirBox->addItem(QString());
         sortdirBox->setObjectName("sortdirBox");
         sortdirBox->setGeometry(QRect(580, 590, 111, 41));
-        sortdirBox->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
+        sortdirBox->setStyleSheet(QString::fromUtf8("color: rgb(141, 73, 58);"));
         label_7 = new QLabel(showPg);
         label_7->setObjectName("label_7");
         label_7->setGeometry(QRect(390, 500, 111, 51));
         label_7->setStyleSheet(QString::fromUtf8("font: 18pt \"\346\245\267\344\275\223\";\n"
-"color: rgb(255, 255, 255);"));
+"color: rgb(141, 73, 58);"));
         label_8 = new QLabel(showPg);
         label_8->setObjectName("label_8");
         label_8->setGeometry(QRect(390, 590, 111, 41));
         label_8->setStyleSheet(QString::fromUtf8("font: 18pt \"\346\245\267\344\275\223\";\n"
-"color: rgb(255, 255, 255);"));
+"color: rgb(141, 73, 58);"));
         displayBtn = new QPushButton(showPg);
         displayBtn->setObjectName("displayBtn");
         displayBtn->setGeometry(QRect(970, 550, 161, 71));
-        displayBtn->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.189944 rgba(202, 144, 87, 255), stop:0.726257 rgba(235, 148, 61, 255), stop:1 rgba(143, 143, 143, 255));\n"
+        displayBtn->setStyleSheet(QString::fromUtf8("background-color:rgb(208, 184, 168);\n"
 "font: 9pt \"\346\245\267\344\275\223\";\n"
 "font-size:25px;\n"
-"color: rgb(255, 255, 255);\n"
+"color: rgb(141, 73, 58);\n"
 "border:none;\n"
 "border-radius:8px"));
         gifShowLab = new QLabel(showPg);
@@ -626,7 +632,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 1167, 21));
+        menubar->setGeometry(QRect(0, 0, 1167, 17));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
@@ -651,7 +657,6 @@ public:
         exitBtn->setText(QCoreApplication::translate("MainWindow", "\351\200\200\345\207\272\347\263\273\347\273\237", nullptr));
         saleStatBtn->setText(QCoreApplication::translate("MainWindow", "\351\224\200\345\224\256\347\273\237\350\256\241", nullptr));
         comManagerBtn->setText(QCoreApplication::translate("MainWindow", "\345\225\206\345\223\201\347\256\241\347\220\206", nullptr));
-        gifLab->setText(QString());
         label_3->setText(QCoreApplication::translate("MainWindow", "\345\225\206\345\223\201\345\217\267\357\274\232", nullptr));
         label_4->setText(QCoreApplication::translate("MainWindow", "\346\225\260\351\207\217\357\274\232", nullptr));
         noEdit->setText(QString());

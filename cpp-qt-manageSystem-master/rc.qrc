@@ -7,6 +7,7 @@
         <file>rc/money.png</file>
         <file>rc/show.gif</file>
         <file>rc/manage.gif</file>
+        <file>rc/swjtu.png</file>
     </qresource>
     <qresource prefix="/1"/>
     <qresource prefix="/"/>
