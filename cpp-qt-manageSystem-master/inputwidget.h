@@ -5,6 +5,7 @@
 #include"head/RepManager.h"
 #include<QSqlDatabase>
 #include<QSqlQuery>
+#include<global.h>
 
 namespace Ui {
 class InputWidget;

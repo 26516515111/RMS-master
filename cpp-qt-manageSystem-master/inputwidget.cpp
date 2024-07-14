@@ -9,18 +9,20 @@ InputWidget::InputWidget(char classCh,QWidget *parent,Commodity* com) :
 
     db2 = new QSqlDatabase(QSqlDatabase::database("connection2"));
     query2=new QSqlQuery(*db2);
-    bool success=query2->exec("CREATE TABLE IF NOT EXISTS items("
-                                "id INTEGER PRIMARY KEY , " // 自增主键
-                                "product_code TEXT, "
-                                "product_type TEXT, "
-                                "unit_price REAL, "
-                                "stock_quantity INTEGER, "
-                                "brand TEXT, "
-                                "manufacturer TEXT, "
-                                "sales INTEGER, "
-                                "cost REAL, "
-                                "category TEXT, "
-                                "weight REAL)");
+    bool success = query2->exec("CREATE TABLE IF NOT EXISTS items ("
+                                "id INTEGER PRIMARY KEY,"
+                                "product_code TEXT,"
+                                "product_type TEXT,"
+                                "price REAL,"
+                                "amount INTEGER,"
+                                "brand TEXT,"
+                                "manufacturer TEXT,"
+                                "sales INTEGER,"
+                                "cost REAL,"
+                                "category TEXT,"
+                                "weight REAL,"
+                                "UNIQUE(product_code, brand)"
+                                ")");
     if(!success)
         QMessageBox::information(this,"失败","用户数据库表创建失败！",QMessageBox::Ok);
 
@@ -44,7 +46,7 @@ InputWidget::InputWidget(char classCh,QWidget *parent,Commodity* com) :
     ui->kindBox->clear();
     ui->kindBox->addItems(kList); //设置下拉选择框内容
 
-    // if(nid){
+    // if(com){
     //     query2->exec("select from *items");
     //     while(query2->next()){
     //         if(query2->value(0).toString()==*nid){
@@ -78,6 +80,7 @@ InputWidget::InputWidget(char classCh,QWidget *parent,Commodity* com) :
 InputWidget::~InputWidget()
 {
     delete ui;
+    delete query2;
 }
 
 
@@ -92,11 +95,13 @@ void InputWidget::on_okBtn_released()  //录入信息
     double weiOrCapa=ui->weightOrCapaBox->value();
     int amount = ui->amountBox->value();
     if(brand==""||manufacturer==""||brand==""||cost<=0||
-            price<=0||weiOrCapa<=0||amount<=0)
+        price<=0||weiOrCapa<=0||amount<=0)
     {
         QMessageBox::critical(this,tr("错误"),tr("输入信息有误，请重新输入！"));
         return ;
     }
+
+
     if(_com) //修改
     {
         std::string no = _com->getNo();
@@ -136,10 +141,60 @@ void InputWidget::on_okBtn_released()  //录入信息
             break;
         case 'D':
             rm.addDaily(std::move(name),std::move(brand),std::move(manufacturer),
-                           price,cost,amount,weiOrCapa,(Daily::DailyKind)kind);
+                        price,cost,amount,weiOrCapa,(Daily::DailyKind)kind);
             break;
         }
     }
+
+
+    QString Nid;
+
+    if(nid){
+        QSqlQuery updateQuery(*db2);
+        updateQuery.prepare("UPDATE items SET product_code = :name, cost = :cost, manufacturer = :manufacturer, brand = :brand, weight = :weiOrCapa, product_type = :kind, price = :price, amount = :amount WHERE id = :id");
+        updateQuery.bindValue(":name", QString::fromStdString(name));
+        updateQuery.bindValue(":cost", cost);
+        updateQuery.bindValue(":manufacturer", QString::fromStdString(manufacturer));
+        updateQuery.bindValue(":brand", QString::fromStdString(brand));
+        updateQuery.bindValue(":weiOrCapa", weiOrCapa);
+        updateQuery.bindValue(":kind", kind);
+        updateQuery.bindValue(":price", price);
+        updateQuery.bindValue(":amount", amount);
+
+        if (!updateQuery.exec()) {
+            qDebug() << "Update failed:" <<"插入失败";
+        } else {
+            qDebug() << "Update successful!";
+        }
+    }else{
+        switch (_classCh)
+        {
+        case 'F': //food
+            Nid = 'F'+QString::number(food_nid++);
+            query2->prepare("INSERT INTO items (id,product_code,product_type,price,amount,brand,manufacturer,sales,cost,category,weight) VALUES (?,?,?,?,?,?,?,?,?,?,?)");
+            //此处增加数据到数据库
+            break;
+        case 'C':
+            Nid = 'C'+QString::number(cosmetic_nid++);
+            query2->prepare("INSERT INTO items (id,product_code,product_type,price,amount,brand,manufacturer,sales,cost,category,weight) VALUES (?,?,?,?,?,?,?,?,?,?,?)");
+            //此处增加数据到数据库
+            break;
+        case 'B':
+            Nid = 'B'+QString::number(beverage_nid++);
+            query2->prepare("INSERT INTO items (id,product_code,product_type,price,amount,brand,manufacturer,sales,cost,category,weight) VALUES (?,?,?,?,?,?,?,?,?,?,?)");
+            //此处增加数据到数据库
+            break;
+        case 'D':
+            Nid = 'D'+QString::number(daily_nid++);
+            query2->prepare("INSERT INTO items (id,product_code,product_type,price,amount,brand,manufacturer,sales,cost,category,weight) VALUES (?,?,?,?,?,?,?,?,?,?,?)");
+                //此处增加数据到数据库
+            break;
+        }
+    }
+
+
+
+
     QMessageBox::information(this,tr("提示"),tr("成功！"));
     this->close();
 }
@@ -149,4 +204,3 @@ void InputWidget::on_cancelBtn_released()
 {
     this->close();
 }
-
