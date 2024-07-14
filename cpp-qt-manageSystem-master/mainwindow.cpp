@@ -60,6 +60,8 @@ MainWindow::MainWindow(QWidget *parent)
     ui->sumCostLcd->setStyleSheet("background-color:white;color:white;");
     ui->sumRevenLcd->setStyleSheet("background-color:white;color:white;");*/
     ui->stackedWidget->setStyleSheet("background-color:#F8EDE3;border-color:#F8EDE3;");
+
+
     //表格禁止编辑
     ui->saledComsTab->setEditTriggers(QAbstractItemView::NoEditTriggers);
     ui->comsTab->setEditTriggers(QAbstractItemView::NoEditTriggers);

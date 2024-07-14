@@ -52,7 +52,7 @@ public:
         InputWidget->setMaximumSize(QSize(659, 410));
         InputWidget->setStyleSheet(QString::fromUtf8(".InputWidget\n"
 "{\n"
-"background-color:rgb(38,38,38);\n"
+"background-color:rgb(248, 237, 227);\n"
 "}\n"
 "\n"
 "\n"
@@ -78,12 +78,12 @@ public:
         label = new QLabel(InputWidget);
         label->setObjectName("label");
         label->setGeometry(QRect(9, 47, 80, 19));
-        label->setStyleSheet(QString::fromUtf8("	color: rgb(255, 255, 255);\n"
+        label->setStyleSheet(QString::fromUtf8("	color: rgb(141, 73, 58);\n"
 "	font: 14pt \"\346\245\267\344\275\223\";"));
         label_2 = new QLabel(InputWidget);
         label_2->setObjectName("label_2");
         label_2->setGeometry(QRect(9, 119, 80, 19));
-        label_2->setStyleSheet(QString::fromUtf8("	color: rgb(255, 255, 255);\n"
+        label_2->setStyleSheet(QString::fromUtf8("	color: rgb(141, 73, 58);\n"
 "	font: 14pt \"\346\245\267\344\275\223\";"));
         brandEdit = new QLineEdit(InputWidget);
         brandEdit->setObjectName("brandEdit");
@@ -95,7 +95,7 @@ public:
         label_3 = new QLabel(InputWidget);
         label_3->setObjectName("label_3");
         label_3->setGeometry(QRect(9, 191, 80, 19));
-        label_3->setStyleSheet(QString::fromUtf8("	color: rgb(255, 255, 255);\n"
+        label_3->setStyleSheet(QString::fromUtf8("	color: rgb(141, 73, 58);\n"
 "	font: 14pt \"\346\245\267\344\275\223\";"));
         manuEdit = new QLineEdit(InputWidget);
         manuEdit->setObjectName("manuEdit");
@@ -103,7 +103,7 @@ public:
         label_4 = new QLabel(InputWidget);
         label_4->setObjectName("label_4");
         label_4->setGeometry(QRect(420, 60, 80, 19));
-        label_4->setStyleSheet(QString::fromUtf8("	color: rgb(255, 255, 255);\n"
+        label_4->setStyleSheet(QString::fromUtf8("	color: rgb(141, 73, 58);\n"
 "	font: 14pt \"\346\245\267\344\275\223\";"));
         priceBox = new QDoubleSpinBox(InputWidget);
         priceBox->setObjectName("priceBox");
@@ -113,7 +113,7 @@ public:
         label_5 = new QLabel(InputWidget);
         label_5->setObjectName("label_5");
         label_5->setGeometry(QRect(420, 130, 80, 19));
-        label_5->setStyleSheet(QString::fromUtf8("	color: rgb(255, 255, 255);\n"
+        label_5->setStyleSheet(QString::fromUtf8("	color: rgb(141, 73, 58);\n"
 "	font: 14pt \"\346\245\267\344\275\223\";"));
         costBox = new QDoubleSpinBox(InputWidget);
         costBox->setObjectName("costBox");
@@ -125,7 +125,7 @@ public:
         weiOrCapaLab = new QLabel(InputWidget);
         weiOrCapaLab->setObjectName("weiOrCapaLab");
         weiOrCapaLab->setGeometry(QRect(420, 200, 80, 19));
-        weiOrCapaLab->setStyleSheet(QString::fromUtf8("	color: rgb(255, 255, 255);\n"
+        weiOrCapaLab->setStyleSheet(QString::fromUtf8("	color: rgb(141, 73, 58);\n"
 "	font: 14pt \"\346\245\267\344\275\223\";"));
         weightOrCapaBox = new QDoubleSpinBox(InputWidget);
         weightOrCapaBox->setObjectName("weightOrCapaBox");
@@ -143,12 +143,12 @@ public:
         label_7 = new QLabel(InputWidget);
         label_7->setObjectName("label_7");
         label_7->setGeometry(QRect(420, 270, 80, 19));
-        label_7->setStyleSheet(QString::fromUtf8("	color: rgb(255, 255, 255);\n"
+        label_7->setStyleSheet(QString::fromUtf8("	color:rgb(141, 73, 58);\n"
 "	font: 14pt \"\346\245\267\344\275\223\";"));
         label_8 = new QLabel(InputWidget);
         label_8->setObjectName("label_8");
         label_8->setGeometry(QRect(9, 263, 80, 19));
-        label_8->setStyleSheet(QString::fromUtf8("	color: rgb(255, 255, 255);\n"
+        label_8->setStyleSheet(QString::fromUtf8("	color: rgb(141, 73, 58);\n"
 "	font: 14pt \"\346\245\267\344\275\223\";"));
         kindBox = new QComboBox(InputWidget);
         kindBox->setObjectName("kindBox");
@@ -156,19 +156,19 @@ public:
         okBtn = new QPushButton(InputWidget);
         okBtn->setObjectName("okBtn");
         okBtn->setGeometry(QRect(140, 340, 111, 25));
-        okBtn->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.189944 rgba(202, 144, 87, 255), stop:0.726257 rgba(235, 148, 61, 255), stop:1 rgba(143, 143, 143, 255));\n"
+        okBtn->setStyleSheet(QString::fromUtf8("background-color: rgb(208, 184, 168);\n"
 "font: 9pt \"\346\245\267\344\275\223\";\n"
 "font-size:25px;\n"
-"color: rgb(255, 255, 255);\n"
+"color: rgb(141, 73, 58);\n"
 "border:none;\n"
 "border-radius:8px"));
         cancelBtn = new QPushButton(InputWidget);
         cancelBtn->setObjectName("cancelBtn");
         cancelBtn->setGeometry(QRect(390, 340, 115, 25));
-        cancelBtn->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.189944 rgba(202, 144, 87, 255), stop:0.726257 rgba(235, 148, 61, 255), stop:1 rgba(143, 143, 143, 255));\n"
+        cancelBtn->setStyleSheet(QString::fromUtf8("background-color: rgb(208, 184, 168);\n"
 "font: 9pt \"\346\245\267\344\275\223\";\n"
 "font-size:25px;\n"
-"color: rgb(255, 255, 255);\n"
+"color: rgb(141, 73, 58);\n"
 "border:none;\n"
 "border-radius:8px"));
 

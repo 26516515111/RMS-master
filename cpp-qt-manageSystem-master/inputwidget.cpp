@@ -7,6 +7,8 @@ InputWidget::InputWidget(char classCh,QWidget *parent,Commodity* com) :
 {
     ui->setupUi(this);
 
+    this->setStyleSheet("background-color:#F8EDE3;border-color:#F8EDE3;");
+
     db2 = new QSqlDatabase(QSqlDatabase::database("connection2"));
     query2=new QSqlQuery(*db2);
     bool success=query2->exec("CREATE TABLE IF NOT EXISTS items("
@@ -23,6 +25,7 @@ InputWidget::InputWidget(char classCh,QWidget *parent,Commodity* com) :
                                 "weight REAL)");
     if(!success)
         QMessageBox::information(this,"失败","用户数据库表创建失败！",QMessageBox::Ok);
+
 
 
     QStringList kList ;
