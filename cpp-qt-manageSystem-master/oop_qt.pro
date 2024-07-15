@@ -10,6 +10,7 @@ QT += sql
 
 SOURCES += \
     database.cpp \
+    global.cpp \
     inputwidget.cpp \
     logindia.cpp \
     main.cpp \
@@ -27,6 +28,7 @@ SOURCES += \
 
 HEADERS += \
     database.h \
+    global.h \
     head/Beverage.h \
     head/Commodity.h \
     head/Cosmetic.h \
