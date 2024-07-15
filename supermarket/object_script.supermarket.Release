@@ -1,0 +1,15 @@
+INPUT(
+./release\main.o
+./release\mainwindow.o
+./release\login.o
+./release\mainwindow2.o
+./release\sales.o
+./release\commidity.o
+./release\users.o
+./release\moc_mainwindow.o
+./release\moc_login.o
+./release\moc_mainwindow2.o
+./release\moc_sales.o
+./release\moc_commidity.o
+./release\moc_users.o
+);
